@@ -1,0 +1,121 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 20 May, 2017, 6:54:31 PM
+    Author     : nishantjain1407
+*/
+
+body{
+    background:#333;        
+    font-family: 'Roboto Slab', serif;
+    margin:0;
+    box-sizing:border-box;
+    text-align:center;
+}
+.heading{
+    padding: 15px 0px;   
+}
+.heading h1{
+    margin-top:10px;
+    /*background: rgba(0,0,0,0.8);*/
+    margin: 15px 0px;
+    color: #EDC53F;
+    font-size:40px;
+}
+
+p{
+    color:white;
+    line-height:30px;
+}
+.game-wrapper{
+    /*display:inline-block;*/
+    padding:0px 15px;
+}
+.tiles-wrapper{
+    max-width: 400px;
+    width:100%;
+    margin: 15px auto;
+    height: 400px;  
+    padding:5px;
+    background:rgba(255,255,255,0.4);
+}
+.tile{   
+    position: relative;
+    height: calc(25% - 2px);
+    width: calc(25% - 2px);
+    vertical-align: top;
+    box-sizing: border-box;
+    background: rgba(0,0,0,0.6);
+    float: left;
+    margin: 1px;
+    border-radius: 3px;
+    text-align: center;      
+    transition:background 0.1s ease-in;
+    cursor:pointer;
+    color:#EDC53F;
+}
+
+
+.material-icons{
+    vertical-align:middle;
+}
+.tile:hover{
+    background:rgba(0,0,0,0.8);
+}
+.tile span{
+    font-size:40px;
+    position:absolute;
+    top:50%;left:50%;        
+    transform:translate(-50%,-50%);
+}
+.emptyTile{
+    background:transparent;
+}
+.emptyTile:hover{
+    background:transparent;
+}
+.btn{
+    display: inline-block;
+    padding: 10px 25px;
+    background: #EDC53F;
+    color: #333;
+    margin: 10px 2px;
+    cursor: pointer;
+    font-size: 16px;
+}
+.text-center{
+    text-align:center;
+}
+
+.game-stats{
+    color: white;
+    display:none;
+    max-width: 400px;
+    margin: 20px auto;
+    font-size: 16px;
+    letter-spacing: 1px;    
+}
+
+.material-icons.win{
+    font-size:50px;
+    color:white;
+    font-weight:bold;
+    display:none;
+}
+.winMsg{
+    display:none;
+    font-weight: bold;
+    margin: 0px;
+    font-size: 30px;
+    margin-top: 20px;
+}
+
+.shadow1{
+    box-shadow: 0px 2px 72px -12px black;
+}
+.shadow2{
+    box-shadow:0px 45px 72px -28px black;
+}
