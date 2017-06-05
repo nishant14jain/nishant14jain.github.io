@@ -1,0 +1,108 @@
+
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TBH Step 2</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/dropzone/4.3.0/dropzone.css"/>
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+        <link rel="stylesheet" href="css/step2.css"/>
+    </head>
+    <body>     
+        <div class="content">
+            <div class="container">
+                <div id="step2">
+                    <h3>Please enter text or upload file</h3>
+                    <div class="inputarea">    
+                        <div class="textinput-wrapper">
+                            <a class="triggerTextarea" href="#!" onclick="toggleState(1)">Enter your text</a>
+                            <div class="openstate">
+                                <div class="triggerHomeState" onclick="toggleState(0)"><i class="fa fa-arrow-left"></i> Back</div>
+                                <textarea id="step2Textarea" placeholder="Enter your text"></textarea>
+                                <div class="textarea-controls">
+                                    <div class="pull-left">
+                                        <div class="word-count"><span id="wordCount">0</span> words</div>
+                                    </div>
+                                    <div class="pull-right">
+                                        <div class="clearAll" onclick="clearTextarea()">Clear All</div>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <p class="orclass">Or</p>
+                        <div class="drop-wrapper">
+                            <form action="/file-upload"
+                                  class="dropzone"
+                                  id="myDropzone">                                    
+                                <div class="table table-striped" class="files" id="previews">
+                                    <div id="template" class="file-row">                                        
+                                        <div class="lane">
+                                            <!--<div class="icon"></div>-->
+                                            <div data-dz-name class="name"></div>
+                                            <div class="progress-wrapper">
+                                                <div id="total-progress" class="progress progress-striped active" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+                                                    <div class="progress-bar progress-bar-success" style="width:0%;" data-dz-uploadprogress></div>
+                                                </div>
+                                            </div>
+                                            <div class="percent">40%</div>
+                                            <div data-dz-remove class="delete">
+                                                <i class="glyphicon glyphicon-trash"></i>                                                    
+                                            </div>
+                                            <div class="clearfix"></div>
+                                        </div>                                        
+                                        <div>
+                                            <!--<p class="size" data-dz-size></p>-->
+
+                                        </div>
+                                        <!--                                        <div>
+                                                                                    <button class="btn btn-primary start">
+                                                                                        <i class="glyphicon glyphicon-upload"></i>
+                                                                                        <span>Start</span>
+                                                                                    </button>
+                                                                                    <button data-dz-remove class="btn btn-warning cancel">
+                                                                                        <i class="glyphicon glyphicon-ban-circle"></i>
+                                                                                        <span>Cancel</span>
+                                                                                    </button>
+                                                                                    <button data-dz-remove class="btn btn-danger delete">
+                                                                                        <i class="glyphicon glyphicon-trash"></i>
+                                                                                        <span>Delete</span>
+                                                                                    </button>
+                                                                                </div>-->
+                                    </div>
+                                </div>                                
+                            </form>                                
+                        </div>
+                        <div class="drop-files-stat">
+                            <div class="pull-left">
+                                <span class="uploadCount">Uploaded 0/1</span>
+                            </div>
+                            <div class="pull-right">
+                                <span class="totalWordCount">450 words</span>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                    </div>
+                    <a href=#!>Any special instructions? Add your note here.</a>
+                    <p class="footnote">Trouble uploading ﬁle? Send your ﬁle(s) to <strong>sales@translatebyhumans.com</strong>
+                        <br> We will be glad to assist you!</p>
+                </div>
+            </div>
+        </div>               
+        <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/dropzone/4.3.0/dropzone.js"></script>
+        <script src="js/step2.js"></script>
+    </body>
+
+
+</html>

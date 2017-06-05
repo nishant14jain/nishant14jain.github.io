@@ -1,0 +1,254 @@
+ 
+body{
+    background:#E6EBF0;
+    font-family:"Open Sans",sans-serif;
+    font-size:16px;
+}            
+#step2{  
+    /*height:320px;*/
+    width:400px;
+    margin:45px auto; 
+    text-align:center;
+}
+#step2 h3{
+    margin: 10px 0px;
+    color: #333;
+    font-weight: 100;
+    font-size: 22px;
+}
+#step2 .inputarea{
+    position: relative;
+    background: white;
+    padding: 15px 0px;
+    height:300px;
+    margin-bottom: 10px;
+    margin: 15px 0px;
+}
+#step2 .dropzone{
+    border: 2px dashed #ddd;
+    position:relative;
+    z-index:10;
+    min-height:0;
+    height:100%;
+    padding:0;
+}
+#step2 .dropzone .dz-message{
+    margin:0;
+    color:#777;
+}
+.dz-message p{
+    color:#00A4DD;
+}
+#step2 .helpericons-wrapper{
+    position:relative;
+    z-index:-1;
+    display:inline-block;
+    margin:10px 0px;
+}
+.helpericons-wrapper .helpericon{
+    font-size:11px;
+    display:inline-block;
+    border-radius:3px;
+    padding:5px;
+    background:#ddd;margin:2px 1px;
+}
+#step2 .dz-message .cue{
+    font-size:14px;
+}
+
+#step2 .textinput-wrapper{
+    padding:15px;
+}
+#step2 .textinput-wrapper textarea{
+    resize:none;
+    /*border-radius:3px;*/
+    width:100%;
+    border:0px solid #ddd;
+    padding:10px;
+    font-size:14px;
+    /*text-align:center;*/
+    color:#777;
+    outline:none;
+    height:calc(100% - 70px);
+}
+#step2 .orclass{
+    font-size:16px;
+    margin:10px;
+    color:#555;
+}
+
+#step2 a{
+    font-size:13px;
+    color:#777;
+    margin:5px 0px;
+    text-decoration:underline;
+}
+#step2 .footnote{
+    font-size:13px;
+    color:#777;
+    margin:5px 0px;
+}
+#step2 .footnote strong{
+    color:#2BB0E0;
+}
+
+#step2 .textinput-wrapper .triggerTextarea{
+    color: #00A4DD;
+    font-size: 18px;
+    text-decoration: none;
+}
+#step2 .drop-wrapper{
+    padding:15px;
+    height:188px;
+    overflow-y:auto;
+    background:white;
+}
+#step2 .drop-wrapper::-webkit-scrollbar {
+    width: 10px;        
+}
+
+#step2 .drop-wrapper::-webkit-scrollbar-track {
+    background: #eee;     
+    box-shadow:inset 0px 0px 7px -5px black;
+}
+
+#step2 .drop-wrapper::-webkit-scrollbar-thumb {        
+    background:#777;        
+}
+#step2 .drop-wrapper::-webkit-scrollbar-thumb:hover{
+    background:#333;
+}
+#step2 .drop-wrapper.active{
+    padding: 15px;
+    height: 150px;
+    position: absolute;    
+    width: 100%;
+    top: 0;
+    height: calc(100% - 40px);
+    left: 0;
+}
+#step2 .drop-wrapper.active #myDropzone{
+    border:0;
+}
+.textinput-wrapper.active{
+    padding: 15px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 65;
+    background: white;
+}
+.textinput-wrapper .openstate{
+    display:none;
+    height:100%;
+    text-align:left;
+}
+.textinput-wrapper.active .openstate{
+    display:block;
+}
+.textarea-controls{
+    font-size: 14px;
+    padding: 10px;
+    font-weight: bold;
+    color:#777;
+}
+.textarea-controls .clearAll{
+    cursor:pointer;
+    color:#2BB0E0;
+}
+.triggerHomeState{
+    color: #2BB0E0;
+    font-size: 14px;
+    padding: 0px 9px;
+    font-weight:bold;
+    margin-bottom: 10px;
+    cursor:pointer;
+}
+.dz-image{
+    float: left;
+    height: 20px;
+    width: 20px;
+    background: #ddd;
+    /* padding: 10px; */
+    margin: 10px;
+}
+.dz-preview{
+    background: #eee;
+    border-bottom: 1px solid white;
+    position:relative;
+}
+.dz-error-message{
+    position: absolute;
+    bottom: -28px;
+    transform: translateX(-50%);
+    left: 50%;
+    width: 100%;
+    color: red;
+    opacity: 0.7;
+}
+.dz-details{
+    float:left;
+}
+.dz-filename,.dz-size{
+    float:left;
+    padding:10px;
+    color:#666;
+}
+.lane{
+    font-size:14px;
+    text-align:left;
+    border-bottom:1px solid #ddd;
+}
+.lane .name,.lane .progress-wrapper,.lane .percent,.lane .delete{
+    float:left;
+    padding:10px 5px;
+    color:#555;
+}
+.lane .name{
+    width:40%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.lane .delete{
+    width: calc(20% - 36px);
+    text-align: center;
+    padding-top: 11px;
+    color: #777;
+    cursor:pointer;
+}
+.lane .progress-wrapper{
+    width:40%;
+}
+.progress-wrapper .progress{
+    margin-bottom:0px;    
+    border-radius:0px;
+}
+
+.lane .percent {
+    width: 36px;    
+}
+.drop-files-stat{
+    display:none;
+    position: absolute;
+    bottom: 0;
+    left:0;
+    z-index:10;
+    background: #ddd;
+    width: 100%;
+}
+.drop-files-stat span{
+    font-size: 14px;
+    padding: 10px;
+    font-weight: bold;
+    color: #777;
+    display:block;
+}
+.progress-bar{
+    width:40% !important;
+}
+.glyphicon-trash{
+    cursor:pointer !important;
+}
